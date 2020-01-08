@@ -1,7 +1,8 @@
 package com.android.mylearning.backgroundservice
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.android.mylearning.R
 
 class BackgroundServiceActivity : AppCompatActivity() {
@@ -10,4 +11,11 @@ class BackgroundServiceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_background_service)
     }
+
+    override fun onStart() {
+        super.onStart()
+        startService(Intent(this, BackgroundService::class.java))
+    }
+
+
 }

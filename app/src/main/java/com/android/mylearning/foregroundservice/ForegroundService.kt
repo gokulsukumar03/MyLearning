@@ -8,8 +8,9 @@ import android.os.Build
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
 import com.android.mylearning.R
-import com.android.mylearning.home.MainActivity
 
+
+@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class ForegroundService : Service(){
 
     private val CHANNEL_ID = "channel_id"
@@ -24,7 +25,8 @@ class ForegroundService : Service(){
             .setContentTitle("Foreground Service")
             .setContentText("Testing Foreground Service")
             .setSmallIcon(R.mipmap.ic_launcher)
-            .build();
+            .setColor(resources.getColor(R.color.colorAccent))
+            .build()
         startForeground(1, notification)
         return START_NOT_STICKY
     }
@@ -40,7 +42,11 @@ class ForegroundService : Service(){
     private fun createNotificationChannel(){
         var manager  : NotificationManager
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val serviceChannel = NotificationChannel(CHANNEL_ID, "Foreground Service", NotificationManager.IMPORTANCE_HIGH)
+            val serviceChannel = NotificationChannel(CHANNEL_ID, "Service", NotificationManager.IMPORTANCE_HIGH)
+            serviceChannel.enableVibration(true)
+            serviceChannel.setShowBadge(true)
+            serviceChannel.vibrationPattern=
+                longArrayOf(100, 200, 300, 400, 500, 400, 300, 200, 400)
             manager = getSystemService(NotificationManager::class.java)
             manager.createNotificationChannel(serviceChannel)
         }
