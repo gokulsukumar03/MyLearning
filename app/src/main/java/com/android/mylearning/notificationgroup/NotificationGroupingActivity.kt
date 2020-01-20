@@ -1,11 +1,10 @@
-package com.android.mylearning
+package com.android.mylearning.notificationgroup
 
-import android.app.NotificationManager
-import android.app.Service
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import com.android.mylearning.R
 import kotlinx.android.synthetic.main.activity_notification_grouping.*
 import kotlin.random.Random
 

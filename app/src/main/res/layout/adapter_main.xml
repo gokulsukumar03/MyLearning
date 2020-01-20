@@ -18,7 +18,7 @@
         android:textColor="@color/colorAccent"
         android:fontFamily="sans-serif-medium"
         android:textSize="16sp"
-        android:text="Testing"/>
+        android:text=""/>
 
         <View
             android:layout_width="match_parent"

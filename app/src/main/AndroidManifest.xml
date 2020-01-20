@@ -16,8 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".jobscheduler.JobSchedulerActivity"/>
-        <activity android:name=".NotificationGroupingActivity" />
+        <activity android:name=".daggersample.DaggerSampleActivity"></activity>
+        <activity android:name=".navigation.NavigationActivity" />
+        <activity android:name=".pagination.PaginationActivity" />
+        <activity android:name=".workmanager.WorkManagerActivity" />
+        <activity android:name=".jobscheduler.JobSchedulerActivity" />
+        <activity android:name=".notificationgroup.NotificationGroupingActivity" />
 
         <service
             android:name=".foregroundservice.ForegroundService"
@@ -25,12 +29,11 @@
         <service
             android:name=".backgroundservice.BackgroundService"
             android:enabled="true" />
+        <service
+            android:name=".jobscheduler.JobSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <service android:name=".jobscheduler.JobSchedulerService"
-            android:permission="android.permission.BIND_JOB_SERVICE"/>
-
-
-        <receiver android:name=".backgroundservice.BackgroundBroadcastReceiver"/>
+        <receiver android:name=".backgroundservice.BackgroundBroadcastReceiver" />
 
         <activity android:name=".backgroundservice.BackgroundServiceActivity" />
         <activity android:name=".foregroundservice.ForegroundServiceActivity" />
