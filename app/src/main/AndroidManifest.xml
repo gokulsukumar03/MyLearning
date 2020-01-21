@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        android:name=".appconfig.dagger.MyLearningApplication">
         <activity android:name=".daggersample.DaggerSampleActivity"></activity>
         <activity android:name=".navigation.NavigationActivity" />
         <activity android:name=".pagination.PaginationActivity" />
