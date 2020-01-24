@@ -7,6 +7,6 @@ import dagger.Binds
 import dagger.Module
 
 @Module
-abstract class DaggerSampleInnerModule {
-    @Binds abstract fun bindActivity(activity : DaggerSampleActivity) : Activity
+abstract class GoogleInnerModule {
+    @Binds abstract fun bindActivity(activity: GoogleAdsActivity) : Activity
 }

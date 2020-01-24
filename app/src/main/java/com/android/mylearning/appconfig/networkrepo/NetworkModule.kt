@@ -2,6 +2,7 @@ package com.android.mylearning.appconfig.networkrepo
 
 import dagger.Module
 import dagger.Provides
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import javax.inject.Singleton
 
@@ -18,5 +19,12 @@ class NetworkModule{
             .baseUrl("")
             .build()
             .create(NetworkRequest::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideOkHttpClient(networkInterceptor: NetworkInterceptor) : OkHttpClient{
+        return OkHttpClient().newBuilder()
+            .addInterceptor(networkInterceptor).build()
     }
 }

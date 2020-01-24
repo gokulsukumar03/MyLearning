@@ -10,7 +10,7 @@ class MyLearningApplication : ApplicationDelegation(), HasAndroidInjector{
     internal fun initApplicationComponents(){
         DaggerApplicationComponent.builder()
             .networkModule(NetworkModule())
-            .commonModule(CommonModule())
+            .commonModule(CommonModule(this))
             .build().inject(this)
 
     }

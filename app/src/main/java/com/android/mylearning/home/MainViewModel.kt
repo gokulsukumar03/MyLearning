@@ -2,6 +2,7 @@ package com.android.mylearning.home
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.android.mylearning.ads.GoogleAdsActivity
 import com.android.mylearning.notificationgroup.NotificationGroupingActivity
 import com.android.mylearning.backgroundservice.BackgroundServiceActivity
 import com.android.mylearning.daggersample.DaggerSampleActivity
@@ -21,6 +22,7 @@ class MainViewModel : ViewModel(){
         mLearningList.add(LearningDto("Job Scheduler", JobSchedulerActivity().javaClass))
         mLearningList.add(LearningDto("Work Manager", WorkManagerActivity().javaClass))
         mLearningList.add(LearningDto("Dagger", DaggerSampleActivity().javaClass))
+        mLearningList.add(LearningDto("Google Ads", GoogleAdsActivity().javaClass))
         mLearningMutableLiveData.value=mLearningList
     }
 }

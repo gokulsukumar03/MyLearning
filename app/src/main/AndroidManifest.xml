@@ -9,15 +9,21 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
+        android:name=".appconfig.dagger.MyLearningApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning"
-        android:name=".appconfig.dagger.MyLearningApplication">
-        <activity android:name=".daggersample.DaggerSampleActivity"></activity>
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ads.GoogleAdsActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6520574635332836~5829106013" />
+
+        <activity android:name=".daggersample.DaggerSampleActivity" />
         <activity android:name=".navigation.NavigationActivity" />
         <activity android:name=".pagination.PaginationActivity" />
         <activity android:name=".workmanager.WorkManagerActivity" />

@@ -7,7 +7,6 @@ import javax.inject.Inject
 
 abstract class ApplicationDelegation : Application() {
     var mDispatchingAndroidInjector : DispatchingAndroidInjector<Any>?=null @Inject set
-    var mSdkLogger : SDKLogger?=null @Inject set
     override fun onCreate() {
         super.onCreate()
         injectIfNecessary()
