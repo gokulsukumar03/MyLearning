@@ -17,7 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ads.GoogleAdsActivity"></activity>
+        <activity android:name=".fragmentstateadapter.FragmentStateAdapterActivity"></activity>
+        <activity android:name=".fragmentpageradapter.FragmentPagerAdapterActivity" />
+        <activity android:name=".ads.GoogleAdsActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
