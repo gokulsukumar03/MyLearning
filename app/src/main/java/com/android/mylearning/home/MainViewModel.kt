@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.android.mylearning.ads.GoogleAdsActivity
 import com.android.mylearning.notificationgroup.NotificationGroupingActivity
 import com.android.mylearning.backgroundservice.BackgroundServiceActivity
+import com.android.mylearning.builderpattern.BuilderPatternActivity
 import com.android.mylearning.daggersample.DaggerSampleActivity
 import com.android.mylearning.foregroundservice.ForegroundServiceActivity
 import com.android.mylearning.fragmentpageradapter.FragmentPagerAdapterActivity
@@ -27,6 +28,7 @@ class MainViewModel : ViewModel(){
         mLearningList.add(LearningDto("Google Ads", GoogleAdsActivity().javaClass))
         mLearningList.add(LearningDto("Fragment Pager Adapter", FragmentPagerAdapterActivity().javaClass))
         mLearningList.add(LearningDto("Fragment State Adapter", FragmentStateAdapterActivity().javaClass))
+        mLearningList.add(LearningDto("Builder", BuilderPatternActivity().javaClass))
         mLearningMutableLiveData.value=mLearningList
     }
 }
