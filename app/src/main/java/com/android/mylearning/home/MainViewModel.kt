@@ -11,6 +11,7 @@ import com.android.mylearning.foregroundservice.ForegroundServiceActivity
 import com.android.mylearning.fragmentpageradapter.FragmentPagerAdapterActivity
 import com.android.mylearning.fragmentstateadapter.FragmentStateAdapterActivity
 import com.android.mylearning.jobscheduler.JobSchedulerActivity
+import com.android.mylearning.nativeads.NativeAdsActivity
 import com.android.mylearning.workmanager.WorkManagerActivity
 
 class MainViewModel : ViewModel(){
@@ -29,6 +30,7 @@ class MainViewModel : ViewModel(){
         mLearningList.add(LearningDto("Fragment Pager Adapter", FragmentPagerAdapterActivity().javaClass))
         mLearningList.add(LearningDto("Fragment State Adapter", FragmentStateAdapterActivity().javaClass))
         mLearningList.add(LearningDto("Builder", BuilderPatternActivity().javaClass))
+        mLearningList.add(LearningDto("Native Ads", NativeAdsActivity().javaClass))
         mLearningMutableLiveData.value=mLearningList
     }
 }
